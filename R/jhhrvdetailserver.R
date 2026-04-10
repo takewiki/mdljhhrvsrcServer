@@ -36,11 +36,15 @@ viewdetailserver <- function(input,output,session,dms_token) {
                                             'RD-T-202302',
                                             'RD-T-202303',
                                             'RD-T-202304',
+                                            'RD-T-202305',
                                             'RD-S-202301',
                                             'RD-S-202302',
                                             'RD-S-202303',
                                             'RD-S-202304',
                                             'RD-S-202305',
+                                            'RD-S-202306',
+                                            'RD-S-202307',
+                                            'RD-S-202308',
                                             'RD-R-202301',
                                             'RD-R-202302',
                                             'RD-R-202303',
@@ -49,10 +53,14 @@ viewdetailserver <- function(input,output,session,dms_token) {
                                             'RD-R-202306',
                                             'RD-R-202307',
                                             'RD-R-202308',
-                                            '单据编号'
-                            )
+                                            '单据编号')
                             #显示数据
                             tsui::run_dataTable2(id = 'hrv_src_view_data_detail', data = data)
+                            
+                            data=data
+                            print(data)
+                            
+                            tsui::run_download_xlsx(id = 'dl_detail',data = data,filename = '工时.xlsx')
                             
                             
                  

@@ -41,11 +41,11 @@ viewsalaryserver <- function(input,output,session,dms_token) {
                                             '单据编号',
                                             '行号',
                                             '单据日期',
-                                            '原部门'
-                                            
-                            )
+                                            '原部门',
+                                            '备注期间')
                             #显示数据
                             tsui::run_dataTable2(id = 'hrv_src_view_data_salary', data = data)
+                            tsui::run_download_xlsx(id = 'dl_salary',data = data,filename = '工资.xlsx')
                             
                             
                  

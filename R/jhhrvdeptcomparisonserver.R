@@ -24,6 +24,8 @@ viewdeptcomparisonserver <- function(input,output,session,dms_token) {
                             #显示数据
                             tsui::run_dataTable2(id = 'hrv_src_view_data_deptcomparison', data = data)
                             
+                            tsui::run_download_xlsx(id = 'dl_deptcomparison',data = data,filename = '新老部门对照.xlsx')
+                            
                             
                  
                           

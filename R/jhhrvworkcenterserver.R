@@ -27,7 +27,7 @@ viewworkcenterserver <- function(input,output,session,dms_token) {
                             tsui::run_dataTable2(id = 'hrv_src_view_data_workcenter', data = data)
                             
                             
-                 
+                            tsui::run_download_xlsx(id = 'dl_workcenter',data = data,filename = '责任中心.xlsx')
                           
                         })
     

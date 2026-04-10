@@ -30,6 +30,8 @@ viewrulevoucherserver <- function(input,output,session,dms_token) {
                             #显示数据
                             tsui::run_dataTable2(id = 'hrv_src_view_data_rulevoucher', data = data)
                             
+                            tsui::run_download_xlsx(id = 'dl_rulevoucher',data = data,filename = '规则表.xlsx')
+                            
                             
                  
                           

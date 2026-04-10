@@ -23,6 +23,8 @@ viewtploutputvoucherserver <- function(input,output,session,dms_token) {
                             #显示数据
                             tsui::run_dataTable2(id = 'hrv_src_view_data_tploutputvoucher', data = data)
                             
+                            tsui::run_download_xlsx(id = 'dl_tploutputvoucher',data = data,filename = '输出凭证.xlsx')
+                            
                             
                  
                           

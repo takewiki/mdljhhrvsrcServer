@@ -27,6 +27,9 @@ viewcosucompanyserver <- function(input,output,session,dms_token) {
                             tsui::run_dataTable2(id = 'hrv_src_view_data_cosucompany', data = data)
                             
                             
+                            tsui::run_download_xlsx(id = 'dl_cosucompany',data = data,filename = '往来单位.xlsx')
+                            
+                            
                  
                           
                         })

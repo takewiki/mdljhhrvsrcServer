@@ -40,6 +40,9 @@ viewrddetailserver <- function(input,output,session,dms_token) {
                             tsui::run_dataTable2(id = 'hrv_src_view_data_rddetail', data = data)
                             
                             
+                            tsui::run_download_xlsx(id = 'dl_rddetail',data = data,filename = '研发工时.xlsx')
+                            
+                            
                  
                           
                         })
